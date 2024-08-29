@@ -1,41 +1,12 @@
 script_key = "lwERrFTrKiWpoWlSntBPowmChWnUeUeh"
 getgenv().Setting = {
-    Chapter = "FooshaVillage_Chapter1",
-    AutoAllChapter = false,
-    Difficulty = "Normal",
-    AutoStartMap = false,
-    AutoReplay = false,
-    Play = false, -- Must be On To Auto Play Macro
-    AutoClaimQuest = true,
-    AutoReturnLobby=true,
-    BlackScreen = false,
-    AutoReturnLobbyIfAnotherPlayInMatch=false,
-    SpoofName = true,
     AutoSkipWave=true,
-    AutoLeaveWave = false,
-    AutoSellWave = false,
-    MentionEveryone = false,
-    SelectAutoLeftWave=30,
-    AutoEquipBest = false,
-    MacroPlayMode = "Default", --Default
-    CapFps = false,
-    FpsBoost = false,
-    RandomAiMover = false,
+    AutoClaimQuest = true,
+    CapFps = true,
+    FpsBoost = true,
     WebhookUrl = "",
-    ChallengeIgnore = {},
-    ChallengeMacro = {},
-    StoryMacro = {},
-    RaidSetting = {
-        RaidName = "Cursed Dungeon",
-        AutoJoin = false,
-        AutoLeaveIfRaidStarts  = false, --
-    },
-    BannerSummon = { 
-        Enable = false,
-        Banner = "Standard"
-    },
     OneClickNewSetting = { 
-        Enable = false,
+        Enable = true,
         Feed = true,
         Leave=false,
         AllChapter = false,
@@ -55,4 +26,7 @@ getgenv().Setting = {
         MaxGemUnit = 1000,
     },
 }
+if getgenv().Loaded  then
+    return 
+end
 loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/950b9999b1274e4d6f9fadc85fe2d77e.lua"))()
