@@ -1,24 +1,58 @@
--- Automated Movement Script for Testing Purposes
--- This script moves the player in a square pattern
-
-local player = game.Players.LocalPlayer
-local character = player.Character or player.CharacterAdded:Wait()
-local humanoid = character:WaitForChild("Humanoid")
-
--- Function to move the character forward
-local function moveForward()
-    humanoid:Move(Vector3.new(0, 0, -1), true)
-    wait(1) -- Wait for 1 second while moving forward
-end
-
--- Function to turn the character right
-local function turnRight()
-    humanoid:Move(Vector3.new(1, 0, 0), true)
-    wait(1) -- Wait for 1 second while turning right
-end
-
--- Main loop to repeat movements
-while true do
-    moveForward()
-    turnRight()
-end
+script_key = "lwERrFTrKiWpoWlSntBPowmChWnUeUeh"
+getgenv().Setting = {
+    Chapter = "FooshaVillage_Chapter1",
+    AutoAllChapter = false,
+    Difficulty = "Normal",
+    AutoStartMap = false,
+    AutoReplay = false,
+    Play = false, -- Must be On To Auto Play Macro
+    AutoClaimQuest = true,
+    AutoReturnLobby=true,
+    BlackScreen = false,
+    AutoReturnLobbyIfAnotherPlayInMatch=false,
+    SpoofName = true,
+    AutoSkipWave=true,
+    AutoLeaveWave = false,
+    AutoSellWave = false,
+    MentionEveryone = false,
+    SelectAutoLeftWave=30,
+    AutoEquipBest = false,
+    MacroPlayMode = "Default", --Default
+    CapFps = false,
+    FpsBoost = false,
+    RandomAiMover = false,
+    WebhookUrl = "",
+    ChallengeIgnore = {},
+    ChallengeMacro = {},
+    StoryMacro = {},
+    RaidSetting = {
+        RaidName = "Cursed Dungeon",
+        AutoJoin = false,
+        AutoLeaveIfRaidStarts  = false, --
+    },
+    BannerSummon = { 
+        Enable = false,
+        Banner = "Standard"
+    },
+    OneClickNewSetting = { 
+        Enable = false,
+        Feed = true,
+        Leave=false,
+        AllChapter = false,
+        IgnoreEquipBest = false,
+        LeaveWave = true,
+        RequiredLevel = 20,
+        AllUnitsToGo = {"Electric Cyborg","Beast Sorcerer","Warrior Princess","Admiral Of Lava","Strongest Swordsman"},
+        SnipeBannerUnits = {"Admiral Of Lava","Strongest Swordsman"}, --Snipe Unit Must Be In All Units To Use
+        TradingSnipe = false,
+        ForceInf = false, --Ignore Level, Unit
+        AnyUnitMythical_Secret = {
+            StartInfinite=true,
+            Feed=true,
+            IgnoreLevel = false
+        },
+        TradingSnipeUnits = {"Electric Cyborg"},
+        MaxGemUnit = 1000,
+    },
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/950b9999b1274e4d6f9fadc85fe2d77e.lua"))()
