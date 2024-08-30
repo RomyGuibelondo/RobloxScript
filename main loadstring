@@ -1,6 +1,5 @@
 script_key = "lwERrFTrKiWpoWlSntBPowmChWnUeUeh"
 getgenv().Setting = {
-    BlackScreen = false,
     AutoSkipWave=true,
     AutoClaimQuest = true,
     CapFps = true,
@@ -26,6 +25,7 @@ getgenv().Setting = {
         TradingSnipeUnits = {"Electric Cyborg"},
         MaxGemUnit = 1000,
     },
+    BlackScreen = false,
 }
 if getgenv().Loaded  then
     return 
