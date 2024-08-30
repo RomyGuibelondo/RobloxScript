@@ -25,7 +25,6 @@ getgenv().Setting = {
         TradingSnipeUnits = {"Electric Cyborg"},
         MaxGemUnit = 1000,
     },
-    BlackScreen = false,
 }
 if getgenv().Loaded  then
     return 
