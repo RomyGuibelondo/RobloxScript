@@ -1,5 +1,6 @@
 script_key = "lwERrFTrKiWpoWlSntBPowmChWnUeUeh"
 getgenv().Setting = {
+    BlackScreen = false,
     AutoSkipWave=true,
     AutoClaimQuest = true,
     CapFps = true,
